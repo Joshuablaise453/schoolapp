@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">1627473777</string>
+    <string name="google_api_key" translatable="false">AIzaSyD36TjlotG9uqJwkYH4GPyH1723nGKfee0</string>
+    <string name="google_app_id" translatable="false">1:1627473777:android:21bc5556d425adc0fc98d0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD36TjlotG9uqJwkYH4GPyH1723nGKfee0</string>
+    <string name="google_storage_bucket" translatable="false">hillside-schoolapp.firebasestorage.app</string>
+    <string name="project_id" translatable="false">hillside-schoolapp</string>
+</resources>
