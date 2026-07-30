@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_student_dashboard"
+            android:icon="@drawable/ic_nav_home"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_student_schedule"
+            android:icon="@drawable/ic_calendar"
+            android:title="My Timetable" />
+        <item
+            android:id="@+id/nav_student_grades"
+            android:icon="@drawable/ic_merit"
+            android:title="My Grades" />
+        <item
+            android:id="@+id/nav_student_assignments"
+            android:icon="@drawable/ic_edit"
+            android:title="My Assignments" />
+        <item
+            android:id="@+id/nav_student_attendance"
+            android:icon="@drawable/ic_person_check"
+            android:title="Attendance" />
+    </group>
+
+    <item android:title="School Services">
+        <menu>
+            <item
+                android:id="@+id/nav_student_fees"
+                android:icon="@drawable/ic_wallet"
+                android:title="School Fees" />
+            <item
+                android:id="@+id/nav_student_library"
+                android:icon="@drawable/ic_library"
+                android:title="Library" />
+            <item
+                android:id="@+id/nav_student_notices"
+                android:icon="@drawable/ic_notice"
+                android:title="Notices" />
+        </menu>
+    </item>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_student_settings"
+                android:icon="@drawable/ic_nav_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_student_help"
+                android:icon="@drawable/ic_help"
+                android:title="Help &amp; Support" />
+            <item
+                android:id="@+id/nav_student_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
