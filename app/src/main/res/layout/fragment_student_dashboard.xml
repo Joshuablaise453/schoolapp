@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Green Curved Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:background="@drawable/student_header_bg"
+                android:paddingBottom="40dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, Bright Learner!"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome back, "
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[User name]"
+                            android:textColor="@color/red"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Profile Banner Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="-20dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Overview"
+                    android:textColor="#1A1A1A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- My Overview Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginBottom="10dp" android:src="@drawable/ic_library" app:tint="#086B38" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="92%" android:textColor="#1A1A1A" android:textSize="18sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Attendance" android:textColor="#666666" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This Term" android:textColor="#086B38" android:textSize="9sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginBottom="10dp" android:src="@drawable/ic_merit" app:tint="#E61214" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:textColor="#1A1A1A" android:textSize="18sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Merit Badges" android:textColor="#666666" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Keep it up!" android:textColor="#E61214" android:textSize="9sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginBottom="10dp" android:src="@drawable/ic_star" app:tint="#3399FF" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:textColor="#1A1A1A" android:textSize="18sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Assignments" android:textColor="#666666" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" android:textColor="#F2A93B" android:textSize="9sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_margin="4dp" app:cardCornerRadius="14dp" app:cardElevation="3dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="12dp">
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp" android:layout_marginBottom="10dp" android:src="@drawable/ic_calendar" app:tint="#600c1b" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18" android:textColor="#1A1A1A" android:textSize="18sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Days Left" android:textColor="#666666" android:textSize="10sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To Term End" android:textColor="#600c1b" android:textSize="9sp" android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Quick Access"
+                    android:textColor="#1A1A1A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Quick Access Grid 4x2 -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="4"
+                    android:columnOrderPreserved="false">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_calendar" app:tint="#086B38" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="My Timetable" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_lessons" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="My Lessons" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_edit" app:tint="#3399FF" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="My Assignments" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_merit" app:tint="#600c1b" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="My Grades" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_notice" app:tint="#E61214" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="Notices" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_wallet" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="School Fees" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <ImageView android:layout_width="50dp" android:layout_height="50dp" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_library" app:tint="#F2A93B" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="Library" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+                        <FrameLayout android:layout_width="50dp" android:layout_height="50dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/filter_bg" android:padding="14dp" android:src="@drawable/ic_email" app:tint="#086B38" />
+                            <TextView android:layout_width="16dp" android:layout_height="16dp" android:layout_gravity="top|end" android:background="@drawable/badge_bg_red" android:gravity="center" android:text="1" android:textColor="@color/white" android:textSize="8sp" />
+                        </FrameLayout>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="Messages" android:textColor="#1A1A1A" android:textSize="10sp" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Today's Schedule -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingEnd="10dp">
+
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today's Schedule" android:textColor="#1A1A1A" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="View All" android:textColor="#086B38" android:textSize="11sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical">
+                            <!-- Items -->
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                                <TextView android:id="@+id/st1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:00 AM" android:textColor="#086B38" android:textSize="10sp" android:textStyle="bold" />
+                                <View android:id="@+id/sd1" android:layout_width="6dp" android:layout_height="6dp" android:layout_centerVertical="true" android:layout_marginStart="6dp" android:layout_toEndOf="@id/st1" android:background="@drawable/badge_bg_active" />
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_toEndOf="@id/sd1" android:gravity="center_vertical" android:orientation="horizontal">
+                                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:background="#F0F9F4" android:padding="5dp" android:src="@drawable/ic_palette" app:tint="#086B38" />
+                                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:orientation="vertical">
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mathematics" android:textColor="#1A1A1A" android:textSize="11sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room 3" android:textColor="#999999" android:textSize="9sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+                                <TextView android:id="@+id/st2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09:30 AM" android:textColor="#086B38" android:textSize="10sp" android:textStyle="bold" />
+                                <View android:id="@+id/sd2" android:layout_width="6dp" android:layout_height="6dp" android:layout_centerVertical="true" android:layout_marginStart="6dp" android:layout_toEndOf="@id/st2" android:background="@drawable/badge_bg_active" />
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_toEndOf="@id/sd2" android:gravity="center_vertical" android:orientation="horizontal">
+                                    <ImageView android:layout_width="22dp" android:layout_height="22dp" android:background="#F0F7FF" android:padding="5dp" android:src="@drawable/ic_science" app:tint="#3399FF" />
+                                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:orientation="vertical">
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Science" android:textColor="#1A1A1A" android:textSize="11sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Room 2" android:textColor="#999999" android:textSize="9sp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Latest Announcements -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
+
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Announcements" android:textColor="#1A1A1A" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="View All" android:textColor="#086B38" android:textSize="11sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:gravity="center_vertical" android:orientation="horizontal">
+                                <ImageView android:layout_width="32dp" android:layout_height="32dp" android:background="#F0F7FF" android:padding="8dp" android:src="@drawable/ic_notice" app:tint="#3399FF" />
+                                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sports Day" android:textColor="#1A1A1A" android:textSize="11sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Friday!" android:textColor="#999999" android:textSize="9sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:gravity="center_vertical" android:orientation="horizontal">
+                                <ImageView android:layout_width="32dp" android:layout_height="32dp" android:background="#F0F9F4" android:padding="8dp" android:src="@drawable/ic_school_bus" />
+                                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:orientation="vertical">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="School Trip" android:textColor="#1A1A1A" android:textSize="11sp" android:textStyle="bold" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Primary 4!" android:textColor="#999999" android:textSize="9sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Bottom Bus Illustration -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="-20dp">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_school_bus" />
+                    <!-- Flowers/Grass placeholder image if available, else just space -->
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

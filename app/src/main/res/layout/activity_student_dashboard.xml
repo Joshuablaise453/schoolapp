@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".StudentDashboard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F9FA">
+
+        <!-- Top Bar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#086B38"
+            android:paddingTop="24dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/menuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/schoolLogo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/hillsid"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/menuButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/schoolLogo"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hillside Schools Naalya"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Excellence in Education"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/notificationLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/notificationLayout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_nav_notifications"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/badge_bg_red"
+                    android:backgroundTint="#E61214"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Fragment Container -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/studentFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/navCard"
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+        <!-- Fixed Bottom Nav -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/navCard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <!-- Dashboard -->
+                <LinearLayout
+                    android:id="@+id/navDash"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View android:id="@+id/indicatorDash" android:layout_width="40dp" android:layout_height="3dp" android:layout_marginBottom="4dp" android:background="#086B38" />
+                    <ImageView android:id="@+id/iconDash" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_home" app:tint="#086B38" />
+                    <TextView android:id="@+id/textDash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dashboard" android:textColor="#086B38" android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- My Classes -->
+                <LinearLayout
+                    android:id="@+id/navClasses"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View android:id="@+id/indicatorClasses" android:layout_width="40dp" android:layout_height="3dp" android:layout_marginBottom="4dp" android:background="#086B38" android:visibility="invisible" />
+                    <ImageView android:id="@+id/iconClasses" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_mortarboard" app:tint="#666666" />
+                    <TextView android:id="@+id/textClasses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Classes" android:textColor="#666666" android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Assignments -->
+                <LinearLayout
+                    android:id="@+id/navAssignments"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View android:id="@+id/indicatorAssignments" android:layout_width="40dp" android:layout_height="3dp" android:layout_marginBottom="4dp" android:background="#086B38" android:visibility="invisible" />
+                    <ImageView android:id="@+id/iconAssignments" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_lessons" app:tint="#666666" />
+                    <TextView android:id="@+id/textAssignments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Assignments" android:textColor="#666666" android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Messages -->
+                <LinearLayout
+                    android:id="@+id/navMessages"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View android:id="@+id/indicatorMessages" android:layout_width="40dp" android:layout_height="3dp" android:layout_marginBottom="4dp" android:background="#086B38" android:visibility="invisible" />
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/iconMessages" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_messages" app:tint="#666666" />
+                        <TextView android:layout_width="12dp" android:layout_height="12dp" android:layout_gravity="top|end" android:background="@drawable/badge_bg_red" android:gravity="center" android:text="1" android:textColor="@color/white" android:textSize="7sp" />
+                    </FrameLayout>
+                    <TextView android:id="@+id/textMessages" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Messages" android:textColor="#666666" android:textSize="10sp" />
+                </LinearLayout>
+
+                <!-- Profile -->
+                <LinearLayout
+                    android:id="@+id/navProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <View android:id="@+id/indicatorProfile" android:layout_width="40dp" android:layout_height="3dp" android:layout_marginBottom="4dp" android:background="#086B38" android:visibility="invisible" />
+                    <ImageView android:id="@+id/iconProfile" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_profile" app:tint="#666666" />
+                    <TextView android:id="@+id/textProfile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="#666666" android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_student"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_student"
+        app:menu="@menu/student_drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
