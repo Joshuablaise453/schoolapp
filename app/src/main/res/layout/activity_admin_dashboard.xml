@@ -239,7 +239,7 @@
                         android:id="@+id/iconClasses"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@android:drawable/ic_menu_agenda"
+                        android:src="@drawable/ic_classes"
                         app:tint="#666666" />
 
                     <TextView

@@ -19,6 +19,10 @@ class AdminClassesFragment : Fragment() {
         val containerList = view.findViewById<LinearLayout>(R.id.classesListContainer)
         setupSampleData(containerList)
 
+        view.findViewById<View>(R.id.addNewClassBtn).setOnClickListener {
+            (activity as? AdminDashboard)?.switchToAddClass()
+        }
+
         return view
     }
 
@@ -41,6 +45,11 @@ class AdminClassesFragment : Fragment() {
             itemView.findViewById<TextView>(R.id.classLevelBadge).text = item.level
             itemView.findViewById<TextView>(R.id.studentCount).text = item.students
             itemView.findViewById<TextView>(R.id.teacherName).text = item.teacher
+
+            itemView.findViewById<View>(R.id.btnEdit).setOnClickListener {
+                (activity as? AdminDashboard)?.switchToEditClass(item.name, item.level, item.teacher.replace("Teacher: ", ""))
+            }
+
             container.addView(itemView)
         }
     }

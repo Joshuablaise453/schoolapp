@@ -106,19 +106,30 @@ class AdminDashboard : AppCompatActivity() {
         replaceFragment(AddUserFragment(), addToBackStack = true)
     }
 
+    fun switchToAddClass() {
+        replaceFragment(AddClassFragment(), addToBackStack = true)
+    }
+
+    fun switchToEditClass(className: String, level: String, teacher: String) {
+        replaceFragment(EditClassFragment.newInstance(className, level, teacher), addToBackStack = true)
+    }
+
     fun updateTopBar(showBack: Boolean) {
+        val searchButton = findViewById<View>(R.id.searchButton)
         if (showBack) {
-            menuButton.setImageResource(R.drawable.ic_back_circle) // Using ic_back_circle as back arrow
+            menuButton.setImageResource(R.drawable.ic_back_circle)
             menuButton.setOnClickListener {
                 onBackPressedDispatcher.onBackPressed()
             }
             drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+            searchButton.visibility = View.GONE
         } else {
             menuButton.setImageResource(android.R.drawable.ic_menu_sort_by_size)
             menuButton.setOnClickListener {
                 drawerLayout.openDrawer(GravityCompat.START)
             }
             drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+            searchButton.visibility = View.VISIBLE
         }
     }
 
