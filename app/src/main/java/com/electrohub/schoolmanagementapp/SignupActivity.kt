@@ -53,6 +53,8 @@ class SignupActivity : AppCompatActivity() {
         val gender = findViewById<AutoCompleteTextView>(R.id.genderDropdown)?.text.toString()
         val role = findViewById<AutoCompleteTextView>(R.id.roleDropdown)?.text.toString()
         val phone = findViewById<EditText>(R.id.phoneInput)?.text.toString().trim()
+        val kinName = findViewById<EditText>(R.id.kinNameInput)?.text.toString().trim()
+        val kinPhone = findViewById<EditText>(R.id.kinPhoneInput)?.text.toString().trim()
         val password = findViewById<EditText>(R.id.passwordInput)?.text.toString()
         val confirmPassword = findViewById<EditText>(R.id.confirmPasswordInput)?.text.toString()
 
@@ -74,7 +76,7 @@ class SignupActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     val userId = auth.currentUser?.uid
                     if (userId != null) {
-                        saveUserToFirestore(userId, fullName, email, gender, role, phone, signupButton)
+                        saveUserToFirestore(userId, fullName, email, gender, role, phone, kinName, kinPhone, signupButton)
                     }
                 } else {
                     signupButton.text = "Sign Up"
@@ -84,7 +86,7 @@ class SignupActivity : AppCompatActivity() {
             }
     }
 
-    private fun saveUserToFirestore(uid: String, name: String, email: String, gender: String, role: String, phone: String, signupButton: Button) {
+    private fun saveUserToFirestore(uid: String, name: String, email: String, gender: String, role: String, phone: String, kinName: String, kinPhone: String, signupButton: Button) {
         val userMap = hashMapOf(
             "uid" to uid,
             "fullName" to name,
@@ -92,6 +94,8 @@ class SignupActivity : AppCompatActivity() {
             "gender" to gender,
             "role" to role,
             "phone" to phone,
+            "kinName" to kinName,
+            "kinPhone" to kinPhone,
             "registered" to true
         )
 
