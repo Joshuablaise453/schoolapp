@@ -57,7 +57,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="[User name]"
-                            android:textColor="@color/red"
+                            android:textColor="@color/timeline_line"
                             android:textSize="15sp"
                             android:textStyle="bold"
                             tools:ignore="HardcodedText"/>
