@@ -25,6 +25,7 @@ class StudentDashboard : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var auth: FirebaseAuth
+    private var userData: Map<String, Any>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,11 +46,37 @@ class StudentDashboard : AppCompatActivity() {
 
         setupNavigation()
         setupBackPress()
+        fetchUserData()
 
         if (savedInstanceState == null) {
             switchToDashboard()
         }
     }
+
+    private fun fetchUserData() {
+        val uid = auth.currentUser?.uid ?: return
+        val db = com.google.firebase.firestore.FirebaseFirestore.getInstance()
+        db.collection("users").document(uid).get()
+            .addOnSuccessListener { document ->
+                if (document != null && document.exists()) {
+                    userData = document.data
+                    updateHeader(document.getString("fullName"))
+                    // Refresh current fragment if it's dashboard or profile
+                    val currentFragment = supportFragmentManager.findFragmentById(R.id.studentFragmentContainer)
+                    if (currentFragment is StudentDashboardFragment || currentFragment is StudentProfileFragment) {
+                        currentFragment.onViewCreated(currentFragment.requireView(), null)
+                    }
+                }
+            }
+    }
+
+    private fun updateHeader(name: String?) {
+        val headerView = navigationView.getHeaderView(0)
+        val nameTextView = headerView.findViewById<TextView>(R.id.drawerStudentName)
+        nameTextView.text = name ?: "User"
+    }
+
+    fun getUserData(): Map<String, Any>? = userData
 
     private fun setupNavigation() {
         findViewById<ImageButton>(R.id.menuButton).setOnClickListener {

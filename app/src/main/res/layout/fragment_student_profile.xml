@@ -48,6 +48,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/profileName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="[User name]"
@@ -56,6 +57,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/profileRole"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Student"
@@ -63,6 +65,7 @@
                             android:textSize="13sp" />
 
                         <TextView
+                            android:id="@+id/profileClass"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
@@ -76,6 +79,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/profileId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
@@ -151,6 +155,36 @@
                     <include layout="@layout/profile_data_row" android:id="@+id/rowUsername" />
                     <include layout="@layout/profile_data_row" android:id="@+id/rowEmail" />
                     <include layout="@layout/profile_data_row" android:id="@+id/rowPassword" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Next of Kin Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Guardian / Next of Kin"
+                android:textColor="#1A1A1A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <include layout="@layout/profile_data_row" android:id="@+id/rowKinName" />
+                    <include layout="@layout/profile_data_row" android:id="@+id/rowKinPhone" />
+                    <include layout="@layout/profile_data_row" android:id="@+id/rowKinRelation" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
