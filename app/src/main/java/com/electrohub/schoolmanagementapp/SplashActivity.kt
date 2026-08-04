@@ -51,10 +51,10 @@ class SplashActivity : AppCompatActivity() {
                     val role = document.getString("role") ?: "Student"
                     val name = document.getString("fullName") ?: ""
                     
-                    val intent = if (role == "Admin") {
-                        Intent(this, AdminDashboard::class.java)
-                    } else {
-                        Intent(this, StudentDashboard::class.java)
+                    val intent = when (role) {
+                        "Admin" -> Intent(this, AdminDashboard::class.java)
+                        "Teacher" -> Intent(this, TeacherDashboard::class.java)
+                        else -> Intent(this, StudentDashboard::class.java)
                     }
                     intent.putExtra("USER_NAME", name)
                     startActivity(intent)
