@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgredg"
+    android:background="@drawable/bck"
     tools:context=".SplashActivity">
 
     <ImageView
@@ -55,7 +55,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="32dp"
         android:alpha="0.5"
-        android:text="--Powered by ElectroHUB--"
+        android:text="--Powered by ElectroHUB &amp; GokTech--"
         android:textColor="@color/redgreen"
         android:textSize="10sp"
         android:textStyle="italic"
