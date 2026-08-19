@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_teacher_dashboard"
+            android:icon="@drawable/ic_nav_home"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_teacher_classes"
+            android:icon="@drawable/ic_mortarboard"
+            android:title="My Classes" />
+        <item
+            android:id="@+id/nav_teacher_students"
+            android:icon="@drawable/ic_nav_profile"
+            android:title="My Students" />
+        <item
+            android:id="@+id/nav_teacher_attendance"
+            android:icon="@drawable/ic_person_check"
+            android:title="Mark Attendance" />
+    </group>
+
+    <item android:title="Academic">
+        <menu>
+            <item
+                android:id="@+id/nav_teacher_assignments"
+                android:icon="@drawable/ic_edit"
+                android:title="Assignments" />
+            <item
+                android:id="@+id/nav_teacher_grades"
+                android:icon="@drawable/ic_merit"
+                android:title="Enter Grades" />
+        </menu>
+    </item>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_teacher_settings"
+                android:icon="@drawable/ic_nav_settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_teacher_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

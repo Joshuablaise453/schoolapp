@@ -63,6 +63,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
+
+        // Set forgot password click listener
+        findViewById<TextView>(R.id.forgotPasswordText)?.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun performFirebaseLogin(email: String, password: String, errorTextView: TextView, loginButton: Button) {
@@ -96,10 +102,10 @@ class LoginActivity : AppCompatActivity() {
                         // Start the logout monitoring service
                         startService(Intent(this, LogoutService::class.java))
                         
-                        val intent = if (role == "Admin") {
-                            Intent(this, AdminDashboard::class.java)
-                        } else {
-                            Intent(this, StudentDashboard::class.java)
+                        val intent = when (role) {
+                            "Admin" -> Intent(this, AdminDashboard::class.java)
+                            "Teacher" -> Intent(this, TeacherDashboard::class.java)
+                            else -> Intent(this, StudentDashboard::class.java)
                         }
 
                         intent.putExtra("USER_NAME", fullName)

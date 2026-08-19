@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background elements -->
+    <path
+        android:fillColor="#F0F9F4"
+        android:pathData="M100,100m-70,0a70,70 0,1 1,140 0a70,70 0,1 1,-140 0" />
+    <path
+        android:fillColor="#D4E9DF"
+        android:pathData="M50,130c5,-10 15,-15 25,-10s10,15 5,25" />
+    <path
+        android:fillColor="#D4E9DF"
+        android:pathData="M150,120c-5,-8 -12,-10 -20,-5s-5,15 5,20" />
+
+    <!-- Open Lock -->
+    <!-- Shackle -->
+    <path
+        android:strokeColor="#086B38"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M75,90V70c0,-13.8 11.2,-25 25,-25s25,11.2 25,25v5" />
+    <!-- Body -->
+    <path
+        android:fillColor="#086B38"
+        android:pathData="M65,90h70c5.5,0 10,4.5 10,10v45c0,5.5 -4.5,10 -10,10h-70c-5.5,0 -10,-4.5 -10,-10v-45C55,94.5 59.5,90 65,90z" />
+    <!-- Keyhole -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,110a5,5 0,1 0,0 10a5,5 0,1 0,0 -10z M100,120v10"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"/>
+
+    <!-- Red Key -->
+    <path
+        android:fillColor="#E61214"
+        android:pathData="M130,140l15,-15c2.8,-2.8 7.2,-2.8 10,0s2.8,7.2 0,10l-15,15c-2.8,2.8 -7.2,2.8 -10,0S127.2,142.8 130,140z" />
+    <path
+        android:fillColor="#E61214"
+        android:pathData="M135,135l-15,-15l-5,5l5,5l-5,5l5,5z" />
+
+</vector>

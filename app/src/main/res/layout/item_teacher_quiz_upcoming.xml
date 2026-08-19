@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/quizIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/nav_circle_bg"
+            android:backgroundTint="#1A086B38"
+            android:padding="8dp"
+            android:src="@drawable/ic_lessons"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#086B38" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/deadlineBadge"
+            app:layout_constraintStart_toEndOf="@id/quizIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/quizTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linear Equations Quiz"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/quizClassSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P4 - Mathematics"
+                android:textColor="#086B38"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/quizDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="4dp"
+                android:drawableTint="#888888"
+                android:gravity="center_vertical"
+                android:text="20 Aug, 2025 • 10:00 AM"
+                android:textColor="#888888"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deadlineBadge"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_bg_red"
+            android:backgroundTint="#FFE4E4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/daysLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#E61214"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Days left"
+                android:textColor="#E61214"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

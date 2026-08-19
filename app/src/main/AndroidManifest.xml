@@ -16,6 +16,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -37,6 +41,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".AdminDashboard"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TeacherDashboard"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
