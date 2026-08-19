@@ -63,6 +63,12 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
+
+        // Set forgot password click listener
+        findViewById<TextView>(R.id.forgotPasswordText)?.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun performFirebaseLogin(email: String, password: String, errorTextView: TextView, loginButton: Button) {
